@@ -1,11 +1,285 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Style Guide</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title></title>
+<link href="./css/reset.css" rel="stylesheet" type="text/css" />
+<link href="./css/styleguide.css" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Nanum+Myeongjo" rel="stylesheet">
+<script src="./js/jquery-3.2.1.min.js"></script>
+
+<script>
+/* 스크롤 사용X  */
+document.documentElement.style.overflow = "hidden";
+document.body.scroll = "yes";
+/* 메뉴 서브 div 보이게 */
+	function showDiv(dId) {
+		$("div[id^=c_]").hide();
+		$("div[id=" + dId + "]").fadeIn(200);
+		$('body').scrollTop(0);
+	};
+
+	$(function() {
+		$('.menu>li').bind('keyup mouseover', function() {
+			$('.sub_menu').show();
+		});
+		$('.menu>li').bind('mouseleave', function() {
+			$('.sub_menu').hide();
+		});
+	});
+
+</script>
 </head>
 <body>
-    
+<div id="wrapper">
+<header id="hd">
+<h1><a href="javascript:showDiv('c_00')">OO사이트 StyleGuide</a></h1>
+<nav>
+<ul>
+	<li class="menu">Introduction
+		<ul class="sub_menu">
+			<li><a href="javascript:showDiv('c_01')">개요</a></li>
+			<li><a href="javascript:showDiv('c_02')">스타일 가이드 구성</a></li>
+			<li><a href="javascript:showDiv('c_03')">기본 환경 규정</a></li>
+		</ul>
+	</li>
+	<li class="menu">Basic Rules
+		<ul class="sub_menu">
+			<li><a href="javascript:showDiv('c_04')">폰트</a></li>
+			<li><a href="javascript:showDiv('c_05')">컬러</a></li>
+		</ul>
+	</li>
+	<li class="menu">Layout
+		<ul class="sub_menu">
+			<li><a href="javascript:showDiv('c_06')">ALL</a></li>
+			<li><a href="javascript:showDiv('c_07')">PC</a></li>
+			<li><a href="javascript:showDiv('c_08')">Tablet</a></li>
+			<li><a href="javascript:showDiv('c_09')">Mobile</a></li>
+		</ul>
+	</li>
+	<li class="menu">Element
+		<ul class="sub_menu">
+			<li><a href="javascript:showDiv('c_10')">네비게이션</a></li>
+			<li><a href="javascript:showDiv('c_11')">아이콘</a></li>
+			<li><a href="javascript:showDiv('c_12')">폼/버튼</a></li>
+		</ul>
+	</li>
+</ul>
+</nav>
+</header>
+<section>
+<div id="contents">
+	<div id="c_00">
+	기본 보여지는 div<br>
+	<a href="./page/sub_page.html">
+	서브페이지 가는 링크</a>
+	</div>
+	<!--Introduction 메뉴-->
+	<div id="c_01">
+	<!--개요-->
+		<h2>OO사이트의 [웹스타일 가이드]</h2>
+		컨셉 : 
+	</div>
+	<div id="c_02">
+	<!--스타일 가이드 구성-->
+		<h2>스타일 가이드 구성</h2>
+			<ul>
+				<li>Introduction : 웹스타일 가이드 기본 활용 및 적용범위</li>
+				<li>Basic Rules : 폰트와 색상 구성</li>
+				<li>Layout : 디바이스 별 레이아웃</li>
+				<li>Elements : 네비게이션 및 기타 요소별 스타일</li>
+			</ul>
+	</div>
+	<div id="c_03">
+	<!-- 브라우저 환경 규정 -->
+		<h2>PC</h2>
+			<ol>
+				<li>1280 x 1024 해상도를 기준으로 한다. </li>
+				<li>메인 페이지의 경우 가로 1100px 이내, 세로 가변.</li>
+				<li>화면정렬 : 중앙정렬을 기본으로 한다.</li>
+			</ol>
+		<h2>TABLET</h2>
+			<ol>
+				<li>1024 x 768 해상도를 기준으로 한다.  </li>
+				<li>메인 페이지의 경우 가로 825px 이내, 세로 가변.</li>
+				<li>화면정렬 : 중앙정렬을 기본으로 한다.</li>
+			</ol>
+		<h2>MOBILE</h2>
+			<ol>
+				<li>640 x 480 해상도를 기준으로 한다. </li>
+				<li>메인 페이지의 경우 가로 600px 이내.</li>
+				<li>화면정렬 : 중앙정렬을 기본으로 한다.</li>
+			</ol>
+	</div>
+
+<!--Basic Rules 메뉴-->
+<div id="c_04">
+	<h2>폰트</h2>
+		<div class="c_font">
+		</div>
+</div>
+<div id="c_05">
+<h2>기본컬러</h2>
+	<div class="c_color">
+		<ul>
+			<li><div style="background-color:#86A5FF; width:70px; height:70px;"></div></li>
+			<li>5050FF</li>
+			<li>R: 80 G: 80 B: 255</li>
+			<li>C:76 M:70 Y:0 K:0</li>
+		</ul>
+		<ul>
+			<li><div style="background-color:#E0EBFF; width:70px; height:70px;"></div></li>
+			<li>5050FF</li>
+			<li>R: 80 G: 80 B: 255</li>
+			<li>C:76 M:70 Y:0 K:0</li>
+		</ul>
+		<ul>
+			<li><div style="background-color:#78A9ED; width:70px; height:70px;"></div></li>
+			<li>5050FF</li>
+			<li>R: 80 G: 80 B: 255</li>
+			<li>C:76 M:70 Y:0 K:0</li>
+		</ul>
+		<ul>
+			<li><div style="background-color:#5050FF; width:70px; height:70px;"></div></li>
+			<li>5050FF</li>
+			<li>R: 80 G: 80 B: 255</li>
+			<li>C:76 M:70 Y:0 K:0</li>
+		</ul>
+	</div>
+	<br>
+	<h2>강조컬러</h2>
+	<div class="c_color">
+		<ul>
+			<li><div style="background-color:#70D2B4; width:70px; height:70px;"></div></li>
+			<li>5050FF</li>
+			<li>R: 80 G: 80 B: 255</li>
+			<li>C:76 M:70 Y:0 K:0</li>
+		</ul>
+		<ul>
+			<li><div style="background-color:#1DD1AD; width:70px; height:70px;"></div></li>
+			<li>5050FF</li>
+			<li>R: 80 G: 80 B: 255</li>
+			<li>C:76 M:70 Y:0 K:0</li>
+		</ul>
+		<ul>
+			<li><div style="background-color:#369F36; width:70px; height:70px;"></div></li>
+			<li>5050FF</li>
+			<li>R: 80 G: 80 B: 255</li>
+			<li>C:76 M:70 Y:0 K:0</li>
+		</ul>
+		<ul>
+			<li><div style="background-color:#679467; width:70px; height:70px;"></div></li>
+			<li>5050FF</li>
+			<li>R: 80 G: 80 B: 255</li>
+			<li>C:76 M:70 Y:0 K:0</li>
+		</ul>
+	</div>
+</div>
+
+<!--layout 메뉴-->
+<div id="c_06">
+	<h2>Layout</h2>
+	<img src="./images/pc.jpg">
+	<img src="./images/tablet.jpg">
+	<img src="./images/mobile.jpg">
+</div>
+<div id="c_07">
+	<h2>Layout-PC</h2>
+	<img src="./images/pc.jpg" width="50%">
+</div>
+<div id="c_08">
+	<h2>Layout-Tablet</h2>
+	<img src="./images/tablet.jpg">
+</div>
+<div id="c_09">
+	<h2>Layout-Mobile</h2>
+	<img src="./images/mobile.jpg">
+</div>
+
+<!--Element 메뉴-->
+<div id="c_10">
+	<h2>네비게이션</h2>
+		<h3>글로벌 네비게이션</h3>
+		<img src="./images/gnb.png" width="70%"><br>
+		<img src="./images/gnb_over.png" width="70%"><br>
+	<br>
+		<h3>페이지 네비게이션</h3>
+		<img src="./images/page_nav.png">
+</div>
+<div id="c_11">
+	<h2>아이콘</h2>
+		<h3>Type1</h3>
+			<ul>
+				<li><img src="./images/icon_home.png"></li>
+				<li><img src="./images/icon_home.png"></li>
+				<li><img src="./images/icon_home.png"></li>
+				<li><img src="./images/icon_home.png"></li>
+				<li><img src="./images/icon_home.png"></li>
+				<li><img src="./images/icon_home.png"></li>
+				<li><img src="./images/icon_home.png"></li>
+				<li><img src="./images/icon_home.png"></li>
+				<li><img src="./images/icon_home.png"></li>
+				<li><img src="./images/icon_home.png"></li>
+				<li><img src="./images/icon_home.png"></li>
+			</ul>
+
+		<h3>Type2</h3>
+			<ul>
+				<li><img src="./images/icon_home.png"></li>
+				<li><img src="./images/icon_home.png"></li>
+				<li><img src="./images/icon_home.png"></li>
+				<li><img src="./images/icon_home.png"></li>
+				<li><img src="./images/icon_home.png"></li>
+				<li><img src="./images/icon_home.png"></li>
+				<li><img src="./images/icon_home.png"></li>
+				<li><img src="./images/icon_home.png"></li>
+				<li><img src="./images/icon_home.png"></li>
+				<li><img src="./images/icon_home.png"></li>
+				<li><img src="./images/icon_home.png"></li>
+			</ul>
+</div>
+<div id="c_12">
+	<h2>폼/버튼</h2>
+		<h3>폼 스타일</h3>
+			<form action="" method="post" name="frm">
+			<input type="text" value="텍스트 필드" class="" size="15"/>
+			<input type="password" value="패스워드" class="" size="15"/>
+			<br>
+			<select class="select_box">
+				<option value="1">선택1</option>
+				<option value="2">선택2</option>
+				<option value="3">선택3</option>
+				<option value="4">선택4</option>
+			</select>
+			<br>
+			<textarea rows="4" cols="35">
+			</textarea>
+			<br>
+			<input type="radio" name="is_a" id="n"/><label for="n">예</label>
+			<input type="radio" name="is_a" id="y" /><label for="y">아니오</label>
+			<br>
+			<input type="checkbox" name="chk1" checked="checked" id="ck1"><label for="ck1">체크1</label>
+			<input type="checkbox" name="chk1" id="ck2"><label for="ck2">체크2</label>
+			<input type="checkbox" name="chk1" id="ck3"><label for="ck3">체크3</label>
+			</form>
+	<br>
+		<h3>버튼의 배경색 구성</h3>
+			<button class="btn01" style="width:70%"></button>
+			<button class="btn02" style="width:70%"></button>
+			<button class="btn03" style="width:70%"></button>
+			<button class="btn04" style="width:70%"></button>
+			<button class="btn05" style="width:70%"></button>
+			<h3>강조색만 다른 기본버튼</h3>
+			<button class="btn01">등록</button>
+			<button class="btn01">검색</button>
+			<button class="btn02">바로가기</button>
+			<button class="btn03">신청하기</button>
+			<button class="btn04">다운로드</button>
+			<button class="btn05">삭제하기</button>
+</div>
+</div>
+</section>
+</div>
 </body>
 </html>
