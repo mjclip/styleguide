@@ -102,27 +102,27 @@
 input{
 	border:0px;
 	border:1px solid #dcdcdc;	
-	color:#666;
+	color:#669966;
 	text-indent:7px;
 	height:25px;
 }
 select{
 	border:0px;
 	border:1px solid #dcdcdc;
-	color:#666;	
+	color:#669966;	
 	height:25px;
 }
 textarea {
 	border:0px;
 	border:1px solid #dcdcdc;
-	color:#666;		
+	color:#669966;		
 }
 input[type="radio"],input[type="checkbox"]{
 	padding:0;
 	margin:5px;
 	height:auto;
 	font-size:0.7rem;
-	color:#666;
+	color:#696;
 }
 
 .select_box{
